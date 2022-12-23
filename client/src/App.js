@@ -10,7 +10,7 @@ import CreateActivity from "./components/Form/CreateActivity"
 import { useState } from 'react';
 import Loader from './components/loader/Loader';
 import axios from 'axios';
-axios.defaults.baseURL = "http://localhost:3001/"
+axios.defaults.baseURL = "countries-app-soyhenry-production.up.railway.app/"
 
 
 function App() {
