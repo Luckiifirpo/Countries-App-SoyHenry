@@ -1,0 +1,67 @@
+-Base de datos:
+    o_Tabla de Paises
+        -o_Validaciones
+    o_Tabla de actividades turisticas
+        -o_Validaciones
+    o_Relación entre las tablas
+
+-Back-End:
+    o_Rutas
+        o_GET:
+            o_/countries
+                o_Traer todos los países desde la API y guardarlos en la bdd
+                o_Debe devolver el listado de países
+            o_/countries/{idPais}
+                o_Debe traer solo datos del país con el que el ID coincida
+                o_Debe traer solo los datos necesarios para la ruta de detalle de país del Front-End
+                o_Debe incluir los datos de las actividades turisticas
+            o_/countries?name=
+                o_Debe traer los países que coincidan con el nombre pasado por queries
+                o_Debe devolver un mensaje si no existe tal país
+        o_POST:
+            o_/activities
+                o_Recibe los datos de la ruta de creación de actividades del Front-End
+                o_Crea la actividad turistica en la bdd
+                o_relaciona la actividad creada con el/los países correspondientes
+
+-Front-End:
+    o_Pagina inicial (Landing page)
+        o_El background debe ser una imagen que represente el tema del proyecto(PAÍSES)
+        o_Debe tener un botón para ingresar a la Ruta principal
+    o_Ruta principal
+        o_Debe contener
+            o_Input para buscar países por nombre
+            o_Area donde se vean los países que obtenga desde *GET/countries*
+                o_Debe mostrar
+                    o_Imagen de la bandera
+                    o_Nombre del país
+                    o_Continente del país
+            o_Botones/Opciones 
+                o_para filtrar por
+                    o_Continente
+                    o_Tipo de actividad turistica
+                o_para ordenar
+                    o_Por orden alfabetico
+                        x_Ascendente
+                        x_Descendente
+                    o_Por cantidad de Población
+                        x_Ascendente
+                        x_Descendente
+            o_Paginado que muestre 9 paises en la primer página y 10 en las demás
+    o_Ruta de detalle de país
+        o_Debe contener
+            o_Toda la información de un país especifico
+            o_Actividades turisticas con toda su información
+    o_Ruta de creación de actividades turisticas
+        o_Debe contener
+            o_Formulario controlado con JavaScript que pida
+                o_Nombre
+                o_Dificultad
+                o_Duración
+                o_Temporada
+            o_Posibiilidad de agregar varios paises al mismo tiempo
+            o_Boton/Opcion para crear la actividad
+
+    
+
+   

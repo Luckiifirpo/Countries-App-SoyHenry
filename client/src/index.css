@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url("../src/resources/mobileBackground.jpg");
+  background-position: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-image: url(https://previews.123rf.com/images/captainvector/captainvector1704/captainvector170400026/75814836-world-map-design.jpg); */
+  /* background: radial-gradient(black, blue); */
+  /* background: linear-gradient(120deg, rgb(23 23 23), rgb(7, 7, 98), rgb(22, 22, 203), rgb(7, 7, 90), rgb(23 23 23)); */
+}
+code {
+  font-family: serif;
+}

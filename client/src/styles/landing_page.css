@@ -1,0 +1,65 @@
+
+#ingresar h1{
+    color: #232323;
+    text-shadow: 0 0 8px whitesmoke;
+}
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover{
+    cursor:default;
+}
+
+#ingresar button{
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    /* background-color: whitesmoke; */
+    background: -webkit-linear-gradient(95deg, rgba(200, 200, 200, 0.9), rgba(83, 83, 83, 0.7), rgba(200, 200, 200, 0.9));
+    color: #232323;
+    text-shadow: 0 0 5px whitesmoke;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+#ingresar button:hover{
+    transform: scale(95%);
+    box-shadow: 0 0 5px 1px black;
+    cursor: pointer;
+}
+
+div#ingresar {
+    background: linear-gradient(75deg, rgba(245, 245, 245, 0.7), rgba(70, 70, 155, 0.5) 50%, rgba(245, 245, 245, 0.7));
+    position: absolute;
+    margin: auto;
+    /* margin-left: -9.5%; */
+    top: 30%;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+}
+
+/* @media (min-width: 375px) {
+    button#ingresar{
+     background-color: blue;
+    }
+} */
+
+
+@media (min-width: 768px) {
+    /* button#ingresar{
+        background-color: blueviolet;
+    } */
+    div#ingresar{
+        top: 25%;
+    }
+}
+
+@media (min-width: 1024px){
+    div#ingresar{
+        top: 35%;
+    }
+}
+
+/* @media (min-width: 1440px){
+    button#ingresar{
+        background-color: crimson;
+    }
+} */
+   

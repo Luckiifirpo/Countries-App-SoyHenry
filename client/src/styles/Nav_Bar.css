@@ -1,0 +1,83 @@
+
+h4{
+    color: whitesmoke;
+    text-shadow:  0px 0px 20px #232323;
+    margin: auto;
+    padding-left: 15px;
+}
+
+select{
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px dashed #232323;
+    background-color: rgba(245, 245, 245, 0.4);
+}
+select:hover{
+    cursor: pointer;
+    background-color: rgba(245, 245, 245, 0.6);
+}
+
+option{
+    color: #232323;
+    background-color: rgb(175, 169, 169);
+}
+
+#navbar{
+    /* background-image: url("../resources/countries.jpg"); */
+    margin-top: 30px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(55deg, #232323, rgba(214, 186, 186, 0.7));
+    backdrop-filter: blur(3px);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 2px #232323;
+}
+
+#create_activity_button{
+    background-color: rgba(245, 245, 245, 0.4);
+    color: #232323;
+    border-radius: 10px;
+    border: 1px solid #232323;
+    font-weight: 500;
+    margin: 15px;
+}
+#create_activity_button:hover{
+    background-color: rgba(245, 245, 245, 0.7);
+    cursor: pointer;
+}
+
+#logout{
+    background-color: rgba(245, 245, 245, 0.4);
+    color: #232323;
+    border-radius: 5px;
+    border: 1px solid #232323;
+    font-weight: 500;
+    font-size: 15px;
+}
+#logout:hover{
+    background-color: rgba(245, 245, 245, 0.7);
+    cursor: pointer;
+}
+
+#searchbar{
+    margin: 5px;
+    background-color: rgba(245, 245, 245, 0.4);
+    border-radius: 15px;
+    border: 1px solid #232323;
+    color: #232323;
+}
+#searchbar:focus{
+    background-color: rgba(245, 245, 245, 0.7);
+}
+
+@media (min-width: 768px) {
+    #navbar{
+        display: flex;
+    }
+
+    #filters{
+        display: flex;
+        flex-direction: row;
+    }
+}
