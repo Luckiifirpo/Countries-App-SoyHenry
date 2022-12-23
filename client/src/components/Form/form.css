@@ -93,6 +93,7 @@ input:focus{
 .errors{
     color: red;
     box-shadow: 0 0 10px 8px inset #232323;
+    font-size: 15px;
     /* text-shadow: 0 0 4px crimson; */
 }
 
