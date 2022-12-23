@@ -13,7 +13,7 @@ export const ORDER_BY_POPULATION = "ORDER_BY_POPULATION";
 export const getCountries = () => {
     return async (dispatch) => {
         try {
-            const requestCountries = await axios.get('http://localhost:3001/countries')
+            const requestCountries = await axios.get('/countries')
             return dispatch({
                 type: GET_COUNTRIES,
                 payload: requestCountries.data
@@ -28,7 +28,7 @@ export const getCountries = () => {
 export const getDetail = (id) => {
     return async (dispatch) => {
         try {
-            const detail = await axios.get(`http://localhost:3001/countries/${id}`);
+            const detail = await axios.get(`/countries/${id}`);
             return dispatch({
                 type: GET_DETAIL,
                 payload: detail.data
@@ -43,7 +43,7 @@ export const getDetail = (id) => {
 export const searchCountries = (name) => {
     return async (dispatch) => {
         try {
-            const countries = await axios.get(`http://localhost:3001/countries?name=${name}`);
+            const countries = await axios.get(`/countries?name=${name}`);
             return dispatch({
                 type: SEARCH_COUNTRIES,
                 payload: countries.data
@@ -57,7 +57,7 @@ export const searchCountries = (name) => {
 export const postActivity = (activity) => {
     return async function(dispatch){
         console.log(activity);
-        const activityTour = await axios.post("http://localhost:3001/activities", activity);
+        const activityTour = await axios.post("/activities", activity);
         return activityTour
     }
 }
@@ -65,7 +65,7 @@ export const postActivity = (activity) => {
 export const getActivities = () => {
     return async function(dispatch){
         try {
-            const activities = await axios.get(`http://localhost:3001/activities`);
+            const activities = await axios.get(`/activities`);
             return dispatch({
                 type: GET_ACTIVITIES,
                 payload: activities.data
