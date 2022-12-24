@@ -10,6 +10,8 @@ import CreateActivity from "./components/Form/CreateActivity"
 import { useState } from 'react';
 import Loader from './components/loader/Loader';
 import axios from 'axios';
+
+// axios.defaults.baseURL = "http://localhost:3001/"
 axios.defaults.baseURL = "https://countries-app-soyhenry-production.up.railway.app/"
 
 
@@ -19,7 +21,6 @@ function App() {
 
   const allCountries = useSelector(state => state.filteredCountries)
   const countries = useSelector(state => state.allCountries)
-  console.log(allCountries);
 
   const [currentPage, setCurrentPage] = useState(0);
   const [isLoading, setIsLoading] = useState(true);

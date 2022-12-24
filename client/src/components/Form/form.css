@@ -3,16 +3,51 @@ p{
     margin: auto;
 }
 
-.checkbox{
+/* .checkbox{
     display: none;
+} */
+
+#selectedCountries{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.flag_and_button{
+    margin: auto;
 }
 
-.countriesflag img{
+.flag_and_button button{
+    border: 1px solid red;
+    margin-left: 80%;
+    color: red;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.flag_and_button button:hover{
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+/* .countriesflag img{
     filter: saturate(0);
+}
+
+.countriesflag img:hover + .countries_name{
+    display: block;
 }
 
 .countriesflag input:checked + img{
     filter: saturate(1);
+} */
+
+.countriesflag .countries_name{
+    width: 150px;
+    box-shadow: 0 0 5px 50px inset gray;
+    color: black;  
+    margin-bottom: auto;
+    /* display: none; */
 }
 
 
@@ -68,6 +103,11 @@ input:focus{
     font-weight: 600;
     margin-bottom: 30px;
     backdrop-filter: blur(1px);
+    position:sticky;
+    bottom: 1%;
+    height: 30px;
+    width: 90px;
+    font-size: 20px;
 }
 #create:hover{
     box-shadow: 0 0 3px 1px whitesmoke;
@@ -83,11 +123,6 @@ input:focus{
 .flags{
     height: 50px;
     width: 90px;
-}
-.flags:hover{
-    cursor: pointer;
-    transform: scale(98%);
-    filter: saturate(25%);
 }
 
 .errors{
@@ -124,6 +159,14 @@ input:focus{
     /* #duration, #select_time{
         margin: 0px;
     } */
+
+    .flag_and_button button{
+        border: 1px solid red;
+        margin-left: 86%;
+        color: red;
+        border-radius: 10px;
+        font-weight: 600;
+    }
     
     #div_form{
         display: flex;
