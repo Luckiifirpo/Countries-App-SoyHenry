@@ -158,7 +158,9 @@ const CreateActivity = (props) => {
                 <h5 className="errors">{errors.countriesID && errors.countriesID}</h5>
 
                 <div id="countries">
+                    <p>Countries:</p>
                     <select name="countries" onChange={handleCountriesSelect}>
+                        <option disabled={true} selected={true} value="">Select country...</option>
                     {allCountries ?
                     allCountries.map(c => 
                         <option name={c.image} value={c.ID}>{c.name}</option>
