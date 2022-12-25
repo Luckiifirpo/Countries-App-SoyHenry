@@ -1,5 +1,5 @@
 const {Op, Country, Tourist_activity} = require("../../db")
-const axios = require("axios"); 
+// const axios = require("axios");
 
 async function caseAll(){
     let allCountries = await Country.findAll({include: Tourist_activity});

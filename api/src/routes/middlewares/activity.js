@@ -44,20 +44,4 @@ router.post("/", async(req, res) => {
         res.status(400).send({error: error.message})
     }
 })
-
-//ESTE PUT ES LA MANERA DE AGREGAR COSAS A LA TABLA INTERMEDIA :)
-// router.put("/", async (req, res) => {
-//     const {countryID, touristActivityID} = req.body;
-
-// try {
-//     country_activity.create({
-//         countryID,
-//         touristActivityID
-//     }).addCountries(countryID)
-//     res.status(200).send("Datos agregados correctamente")
-// } catch (error) {
-//     res.status(400).send(error.message)
-// }
-
-// })
 module.exports = router;
