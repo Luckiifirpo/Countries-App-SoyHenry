@@ -1,7 +1,3 @@
-/* #background{
-    background: linear-gradient(120deg, rgb(23 23 23), rgb(7, 7, 98), rgb(22, 22, 203), rgb(7, 7, 90), rgb(23 23 23));
-} */
-
 #back_button{
     border-radius: 5px;
     color: #232323;
@@ -46,6 +42,7 @@ fieldset{
     box-shadow: 0 0 15px 10px rgba(82, 82, 82, 0.4);
     height: max-content;
     margin-bottom: 20px;
+    max-width: 80%;
 }
 
 fieldset:last-of-type{
@@ -67,25 +64,9 @@ fieldset:last-of-type{
         align-items: center;
         text-align: initial;
     }
-    /* #activities{
-        width: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        margin-left: -70%;
-    } */
-    /* #activities h2{
-        display: flex;
-        align-items: center;
-        margin-right: 20px;
-        margin-left: 25%;
-        flex-wrap: wrap;
-        flex-direction: row;
-    } */
+    #background{
+        max-width: 95%;
+    }
     .activity{
         display: flex;
         justify-content: center;
@@ -110,15 +91,3 @@ fieldset:last-of-type{
         margin: 30px;
     }
 }
-
-/* @media (min-width: 1024px) {
-    #activities h2{
-        margin-left: 30%;
-    }
-}
-
-@media (min-width: 1440px) {
-    #activities h2{
-        margin-left: 40%;
-    }
-} */

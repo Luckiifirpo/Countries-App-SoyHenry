@@ -4,14 +4,6 @@ import { getDetail, postActivity } from "../../redux/actions";
 import Validate from "./validations";
 import "./form.css"
 
-
-var currentId = 0;
-
-function generateId() {
-    currentId += 1;
-    return currentId;
-}
-
 const CreateActivity = (props) => {
     let {allCountries, setIsLoading} = props;
     const dispatch = useDispatch();
@@ -21,7 +13,6 @@ const CreateActivity = (props) => {
     const [selected, setSelected] = useState([]);
 
     const [data, setData] = useState({
-        ID: 0,
         name: "",
         difficulty: 0,
         duration: 0,
@@ -79,7 +70,7 @@ const CreateActivity = (props) => {
         window.alert("The Activity has been created")
         setData({
             ...data,
-            ID: generateId()
+            // ID: generateId()
         })
         dispatch(postActivity(data))
     }

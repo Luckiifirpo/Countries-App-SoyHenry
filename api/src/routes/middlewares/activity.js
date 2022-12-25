@@ -1,7 +1,9 @@
 const {Router} = require("express");
-const {Op, Tourist_activity, country_activity, Country} = require("../../db")
+const {Op, Tourist_activity} = require("../../db")
 // const axios = require("axios");
 const router = Router();
+
+let id = 0;
 
 router.get("/", async(req, res) => {
     let allActivities = await Tourist_activity.findAll();
@@ -15,28 +17,17 @@ router.get("/", async(req, res) => {
 })
 
 router.post("/", async(req, res) => {
-    const { ID ,name, difficulty, duration, season, countriesID, durationTime} = req.body;
-
-    const existId = await Tourist_activity.findByPk(ID);
-    if(existId){
-        return res.status(400).send(`Ya exíste una actividad con ID: ${ID}`)
-    }
+    const {name, difficulty, duration, season, countriesID, durationTime} = req.body;
 
     const createdActivity = await Tourist_activity.create({
-        ID,
+        ID: id++,
         name,
         difficulty,
         duration,
         durationTime,
         season,
     })
-     countriesID.forEach(element => {
-        if(!Country.findByPk(element)) return res.status(400).send("Un país no se encontró en la bdd")
-         country_activity.create({
-            countryID: element,
-            touristActivityID: ID
-        })
-    });
+    createdActivity.addCountries(countriesID)
 
     try {
         res.status(200).send(createdActivity)

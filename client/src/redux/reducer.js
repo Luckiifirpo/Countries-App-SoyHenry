@@ -50,7 +50,6 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 filteredCountries: allCountries
             }
-
         case FILTER_BY_ACTIVITIES:
             const filteredCountries = state.allCountries
             const filteredByActivities = !action.payload ? filteredCountries 
@@ -65,7 +64,6 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 filteredCountries
             }
-
         case ORDER_BY_POPULATION:
             let sortPopulation = action.payload === "lessPeople" ?
                 state.filteredCountries.sort(function (a,b) {
@@ -90,7 +88,6 @@ export default function rootReducer(state = initialState, action) {
                  ...state,
                  filteredCountries: sortPopulation
               }
-
         case ORDER_BY_NAME:
             let sortName = state.filteredCountries.sort((a, b) => (a.name > b.name ? 1 : -1));
               if(!action.payload) return state
