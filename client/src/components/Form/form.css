@@ -7,6 +7,10 @@ p{
     display: none;
 } */
 
+select{
+    backdrop-filter: blur(1px);
+}
+
 #selectedCountries{
     display: flex;
     flex-direction: row;
