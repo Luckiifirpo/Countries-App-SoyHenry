@@ -84,11 +84,14 @@ input:focus{
 
 #countries{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin: 5px;
     justify-content: center;
     align-items: center;
+}
+
+#countries p{
+    margin: -17px;
 }
 
 #countries, div{
