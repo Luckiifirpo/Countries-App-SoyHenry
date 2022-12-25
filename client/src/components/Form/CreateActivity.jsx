@@ -5,10 +5,10 @@ import Validate from "./validations";
 import "./form.css"
 
 
-var currentId = Math.random(0, 999);
+var currentId = 0;
 
 function generateId() {
-    currentId = Math.random(0, 999);
+    currentId += 1;
     return currentId;
 }
 
