@@ -14,7 +14,7 @@
 }
 #buttonLanding{
     height: 100px;
-    animation: fly 4s linear 1;
+    animation: fly 3s linear 1;
     animation-delay: 50ms;
 }
 @keyframes fly{
