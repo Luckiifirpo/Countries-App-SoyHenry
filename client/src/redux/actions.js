@@ -71,7 +71,8 @@ export const getActivities = () => {
                 payload: activities.data
             })
         } catch (error) {
-            console.log({error: error});
+            return error.message
+            // console.log({error: error});
         }
     }
 }
