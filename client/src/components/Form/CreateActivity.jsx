@@ -85,7 +85,7 @@ const CreateActivity = (props) => {
 
     if(allCountries.length) setIsLoading(false)
     return(
-        <div>
+        <div id="form_background">
             {allCountries.length ? <div>
 
             

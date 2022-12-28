@@ -22,7 +22,7 @@ export default function Principal(props){
 
         window.scrollTo({
             top: 0,
-            behavior: "auto"
+            behavior: "smooth"
         })
 
         if(allCountries.length){
@@ -42,7 +42,7 @@ export default function Principal(props){
         
         window.scrollTo({
             top: 0,
-            behavior: "auto"
+            behavior: "smooth"
         })
 
         setItems([...allCountries].splice(lastIndex -  1, ITEMS_PER_PAGE))

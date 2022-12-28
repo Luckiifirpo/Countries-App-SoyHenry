@@ -3,6 +3,55 @@
     color: #232323;
     text-shadow: 0 0 8px whitesmoke;
 }
+#ingresar img {
+    width: 195px;
+    height: 98px;
+    margin-top: -37px;
+    margin-bottom: -5px;
+}
+#ingresar h3:hover{
+    cursor: pointer;
+}
+#buttonLanding{
+    height: 100px;
+    animation: fly 4s linear 1;
+    animation-delay: 50ms;
+}
+@keyframes fly{
+    from{
+        transform: translateX(-250%) translateY(-80%) rotate(30deg);
+    }
+    to{
+        transform: translateX(0) translateY(0);
+    }
+}
+#buttonLanding:focus{
+    animation: flyAgain 2s linar 1;
+}
+@keyframes flyAgain{
+    from{
+        transform: translate(0) rotate(0);
+    }
+    to{
+        transform: translateX(60%) translateY(-50%) rotate(200deg);
+    }
+}
+#buttonLanding:hover{
+    transform: scale(110%);
+    cursor: pointer;
+}
+#buttonLanding img:hover{
+    cursor: pointer;
+}
+#buttonLangind h3:hover{
+    cursor: pointer;
+}
+#ingresar h3{
+    color: whitesmoke;
+    position: relative;
+    top: -74px;
+    font-size: 18px;
+}
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover{
     cursor:default;
 }
@@ -11,7 +60,6 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover{
     width: 100px;
     height: 35px;
     border-radius: 15px;
-    /* background-color: whitesmoke; */
     background: -webkit-linear-gradient(95deg, rgba(200, 200, 200, 0.9), rgba(83, 83, 83, 0.7), rgba(200, 200, 200, 0.9));
     color: #232323;
     text-shadow: 0 0 5px whitesmoke;
@@ -29,25 +77,15 @@ div#ingresar {
     background: linear-gradient(75deg, rgba(245, 245, 245, 0.7), rgba(70, 70, 155, 0.5) 50%, rgba(245, 245, 245, 0.7));
     position: absolute;
     margin: auto;
-    /* margin-left: -9.5%; */
     top: 30%;
     border-radius: 25px;
     backdrop-filter: blur(5px);
 }
 
-/* @media (min-width: 375px) {
-    button#ingresar{
-     background-color: blue;
-    }
-} */
-
-
 @media (min-width: 768px) {
-    /* button#ingresar{
-        background-color: blueviolet;
-    } */
     div#ingresar{
         top: 25%;
+        transform: scale(130%);
     }
 }
 
@@ -56,10 +94,3 @@ div#ingresar {
         top: 35%;
     }
 }
-
-/* @media (min-width: 1440px){
-    button#ingresar{
-        background-color: crimson;
-    }
-} */
-   

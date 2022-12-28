@@ -17,6 +17,10 @@
     margin-bottom: 35px;
 }
 
+#noActivities{
+    text-decoration: none;
+}
+
 h1, h3{
     color: #232323;
     text-shadow: 0 0 10px whitesmoke;
@@ -45,6 +49,11 @@ fieldset{
     max-width: 80%;
 }
 
+#background img{
+    max-width: 100%;
+    margin: auto;
+}
+
 fieldset:last-of-type{
     margin-bottom: 30px;
 }
@@ -66,6 +75,9 @@ fieldset:last-of-type{
     }
     #background{
         max-width: 95%;
+    }
+    #background img{
+        margin-left: 5vh;
     }
     .activity{
         display: flex;
@@ -89,5 +101,11 @@ fieldset:last-of-type{
         align-items: center;
         justify-content: center;
         margin: 30px;
+    }
+}
+
+@media (min-width: 819px) {
+    #background img{
+        margin-left: 5vh;
     }
 }

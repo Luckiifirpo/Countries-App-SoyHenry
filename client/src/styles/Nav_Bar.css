@@ -70,6 +70,10 @@ option{
 #searchbar:focus{
     background-color: rgba(245, 245, 245, 0.7);
 }
+.filters_orders select{
+    margin: auto;
+    margin-left: 5px;
+}
 
 @media (min-width: 768px) {
     #navbar{

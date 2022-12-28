@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail } from "../redux/actions";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Loader from "./loader/Loader.jsx"
 import "../styles/details.css"
 
@@ -25,8 +25,8 @@ export default function CountryDetail(props){
             {!details.length || details[0].ID !== id ? <Loader/>
          :<section id="all_details">
         <img src={details[0].image} alt={details.name} />
-        <div>
 
+        <div>
         <h1 className="details">{details[0].ID}</h1>
         <h1 className="details">Name: {details[0].name}</h1>
         <h2 className="details">Capital: {details[0].capital}</h2>
@@ -45,11 +45,10 @@ export default function CountryDetail(props){
                 <h4 className="details">Duration: {activity.duration}</h4>
                 <h4 id="last_detail" className="details">Season: {activity.season}</h4>
             </fieldset>
-        </div>): <div><h3>There`s no activities</h3></div>}
+        </div>): <div id="noActivities"><h3>There`s no activities, you can create some activities <Link to={"/createActivity"}>Here</Link></h3></div>}
         </div>
 
-        </section> 
-        }
+        </section>}
 
         </div>
     )

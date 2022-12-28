@@ -1,4 +1,5 @@
 import "../styles/landing_page.css"
+import plane from "../resources/avion.svg"
 
 export default function Landing(props){
     const {setIsLoading} = props
@@ -6,7 +7,10 @@ export default function Landing(props){
     return(
         <div id="ingresar">
             <h1>Countries App</h1>
-            <button type="submit" onClick={props.LandingSubmit} id="ingresar">Ingresar</button>
+            <div id="buttonLanding" onClick={props.LandingSubmit}>
+                <img src={plane} alt="Plane image, click to start"/>
+                <h3>start</h3>
+            </div>
         </div>
     )
 }

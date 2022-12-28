@@ -9,8 +9,18 @@ p{
 
 select{
     backdrop-filter: blur(1px);
+    max-width: 100%;
+    margin: auto;
 }
 
+#form_background{
+    background-color: rgba(245, 245, 245, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    width: 90%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
 #selectedCountries{
     display: flex;
     flex-direction: row;
@@ -84,6 +94,7 @@ input:focus{
 
 #title{
     font-size: 40px;
+    filter: drop-shadow(0 0 5px #232323);
 }
 
 #countries{
@@ -124,7 +135,8 @@ input:focus{
 }
 
 #form div{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin: auto;
 }
 
 .flags{
@@ -136,7 +148,12 @@ input:focus{
     color: red;
     box-shadow: 0 0 10px 8px inset #232323;
     font-size: 15px;
-    /* text-shadow: 0 0 4px crimson; */
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+.errors:last-of-type {
+    margin-bottom: 4vh;
 }
 
 @media (min-width: 450px) and (max-width: 767px){
@@ -151,22 +168,13 @@ input:focus{
     #go_back{
         margin-left: -90%;
     }
-
     .flags{
         height: 100px;
         width: 180px;
     }
-
     input{
-       /* width: 150px;
-        height: 20px; */
         margin: 8px;
     } 
-
-    /* #duration, #select_time{
-        margin: 0px;
-    } */
-
     .flag_and_button button{
         border: 1px solid red;
         margin-left: 86%;
@@ -174,7 +182,9 @@ input:focus{
         border-radius: 10px;
         font-weight: 600;
     }
-    
+    .errors{
+        max-width: 60%;
+    }
     #div_form{
         display: flex;
         flex-direction: row;
