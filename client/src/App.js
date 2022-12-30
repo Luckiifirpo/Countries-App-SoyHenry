@@ -2,8 +2,8 @@ import './App.css';
 import Landing from "./components/Landing_Page"
 import Principal from './components/Principal_Route';
 import {Routes, Route, useNavigate, useLocation} from "react-router-dom"
-import { useSelector, connect } from "react-redux"
-import { getCountries } from './redux/actions';
+import { useSelector, connect, useDispatch } from "react-redux"
+import { getCountries, getDetail } from './redux/actions';
 import NavBar from './components/NavBar';
 import CountryDetail from './components/CountryDetail';
 import CreateActivity from "./components/Form/CreateActivity"
@@ -52,8 +52,7 @@ function App() {
 
 function mapStateToProps(state){
   return {
-    allCountries: state.allCountries,
-    activities: state.activities,
+    allCountries: state.filteredCountries,
   }
 }
 

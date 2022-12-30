@@ -9,6 +9,10 @@ const CreateActivity = (props) => {
     const dispatch = useDispatch();
     setIsLoading(true);
 
+    // useEffect(() => {
+    //     dispatch(getDetail("")) 
+    //   }, [])
+
     const detail = useSelector(state => state.countryDetail);
     const [selected, setSelected] = useState([]);
 
@@ -70,7 +74,6 @@ const CreateActivity = (props) => {
         window.alert("The Activity has been created")
         setData({
             ...data,
-            // ID: generateId()
         })
         dispatch(postActivity(data))
     }
@@ -116,10 +119,13 @@ const CreateActivity = (props) => {
                 <div id="duration">
                     <p>Duration:</p>
                     <input type="number"
-                     placeholder="Duration..."
+                     placeholder="Time..."
                      name="duration"
+                     min={1}
+                     max={59}
                      value={data.duration}
-                     onChange={handleInputChange} />
+                     onChange={handleInputChange}
+                     id="time_input" />
                     <select id="select_time" name="durationTime" onChange={handleInputChange}>
                         <option value="" selected={true} disabled={true}>Time</option>
                         <option value="minutes">Minutes</option>

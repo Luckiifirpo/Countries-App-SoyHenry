@@ -17,10 +17,11 @@ export default function rootReducer(state = initialState, action) {
                 filteredCountries: [...action.payload]
             }
         case GET_DETAIL:
+            console.log(action);
                 return {
                     ...state,
                     countryDetail: action.payload
-                }
+            }
         case SEARCH_COUNTRIES:
             return {
                 ...state,
@@ -87,7 +88,7 @@ export default function rootReducer(state = initialState, action) {
             return {
                  ...state,
                  filteredCountries: sortPopulation
-              }
+            }
         case ORDER_BY_NAME:
             let sortName = state.filteredCountries.sort((a, b) => (a.name > b.name ? 1 : -1));
               if(!action.payload) return state
@@ -100,7 +101,7 @@ export default function rootReducer(state = initialState, action) {
               return{
                 ...state,
                 filteredCountries: sortName.reverse()
-              }
+            }
         default:
             return state;
     }
