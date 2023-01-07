@@ -21,13 +21,14 @@ export default function NavBar(props){
     
     function handleFilter(e){
         dispatch(filterCountryByActivity(e.target.value))
-        setCurrentPage(0)
+        setCurrentPage(1)
     }
 
     function handleContinentFilter(e){
         dispatch(filterCountryByContinent(e.target.value))
-        setCurrentPage(0)
+        setCurrentPage(1)
     }
+    
     function handleOrder(e){
         setOrder({
             ...order,
@@ -42,23 +43,23 @@ export default function NavBar(props){
     
     useEffect(() => {
         dispatch(searchCountries(name))
-        setCurrentPage(0)
+        setCurrentPage(1)
     },[name, dispatch])
     
     useEffect(() => {
         dispatch(orderByPopulation(order.population))
-        if(currentPage === 0){
+        if(currentPage === 1){
             Apply()
         }
-        setCurrentPage(0)
+        setCurrentPage(1)
     }, [order.population, dispatch])
 
     useEffect(() => {
         dispatch(orderByName(order.countryOrder))
-        if(currentPage === 0){
+        if(currentPage === 1){
             Apply()
         }
-        setCurrentPage(0)
+        setCurrentPage(1)
     }, [order.countryOrder, dispatch])
 
 

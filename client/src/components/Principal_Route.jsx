@@ -33,8 +33,32 @@ export default function Principal(props){
         }
     }
 
+    function nextHandlerToTest(event){
+        let pageToMove = parseInt(event.target.value)
+
+        const totalItems = allCountries.length;
+        
+        const nextPage = pageToMove;
+        
+        const firstIndex = nextPage * ITEMS_PER_PAGE
+        
+        if(firstIndex >= totalItems) return;
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+
+        if(allCountries.length){
+            setItems([...allCountries].splice(firstIndex - 1, ITEMS_PER_PAGE))
+            setCurrentPage(nextPage)
+        }else{
+            setItems([])
+        }
+    }
+
     function prevHandler(){
-        if(currentPage === 0) return;
+        if(currentPage === 1) return;
         
         const prevPage = currentPage - 1;
         
@@ -56,17 +80,35 @@ export default function Principal(props){
         firstPage = [...allCountries].splice(0, ITEMS_IN_FIRST_PAGE)
     }, [allCountries])
 
+    let allPages = Math.floor(allCountries.length / ITEMS_PER_PAGE)
+
     if(firstPage.length) setIsLoading(false)
 
+    if(allCountries[0].error){
+        return(
+            <div>
+                <br />
+                <p>{allCountries[0].error.response.data.error}</p>
+            </div>
+        )
+    }
     return(<div>
         <section className="pagination">
+            <p>current page: {currentPage} of {allPages}</p>
             <button onClick={prevHandler}>prev</button>
-                <button>{currentPage}</button>
+                {/* {currentPage - 3 > 0 ? <div>
+                    <button onClick={nextHandlerToTest} value={currentPage - 3}>{currentPage - 3}</button>
+                    <button onClick={nextHandlerToTest} value={currentPage - 2}>{currentPage - 2}</button>
+                </div>: null}
+                {currentPage + 3 <= allPages ? <div className="pagination">
+                    <button onClick={nextHandlerToTest} value={currentPage + 2}>{currentPage + 2}</button>
+                    <button onClick={nextHandlerToTest} value={currentPage + 3}>{currentPage + 3}</button>
+                </div> : null} */}
             <button onClick={nextHandler}>next</button>
         </section>
         <section>
             <section>
-                {currentPage === 0 ? <div id="cards">
+                {currentPage === 1 ? <div id="cards">
                     {firstPage.map(country => (
                           <CountryCard
                           key={country.ID}
@@ -94,7 +136,10 @@ export default function Principal(props){
         </section>
         <section className="pagination">
             <button onClick={prevHandler}>prev</button>
-                <button>{currentPage}</button>
+                {/* <button>{currentPage}</button>
+                <button onClick={nextHandlerToTest} value={currentPage + 2}>{currentPage + 2}</button>
+                <button onClick={nextHandlerToTest} value={currentPage + 3}>{currentPage + 3}</button>
+                <button onClick={nextHandlerToTest} value={currentPage + 4}>{currentPage + 4}</button> */}
             <button onClick={nextHandler}>next</button>
         </section>
     </div>

@@ -21,7 +21,7 @@ function App() {
   const allCountries = useSelector(state => state.filteredCountries)
   const countries = useSelector(state => state.allCountries)
 
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
 
   function logOut(){

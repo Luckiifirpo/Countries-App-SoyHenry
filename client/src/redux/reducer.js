@@ -17,12 +17,19 @@ export default function rootReducer(state = initialState, action) {
                 filteredCountries: [...action.payload]
             }
         case GET_DETAIL:
-            console.log(action);
+            // console.log(action);
                 return {
                     ...state,
                     countryDetail: action.payload
             }
         case SEARCH_COUNTRIES:
+            console.log({"action.payload es":action.payload})
+            if(action.payload.error){
+                return{
+                    ...state,
+                    filteredCountries: [action.payload]
+                }
+            }
             return {
                 ...state,
                 filteredCountries: [...action.payload]

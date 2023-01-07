@@ -3,7 +3,6 @@ const nameValidation = /^[a-z\s]+$/i
 export default function Validate(inputs){
     let errors = {}
     const time_input = document.getElementById("time_input")
-    // console.log({inputs: inputs});
 
     if(!inputs.name) errors.name = "A name is required for the activity"
         else if(inputs.name.length > 50) errors.name = "Name must contain no more than 50 characters"
@@ -23,9 +22,6 @@ export default function Validate(inputs){
     }
 
     if(inputs.duration <= 0) errors.duration = "The duration must not be 0"
-        // else if(inputs.duration > 59){
-        //     errors.duration = "The duration cannot be more than 59 minutes"
-        // }
 
     if(!inputs.season) errors.season = "You must select a season of the year"
 

@@ -9,10 +9,6 @@ const CreateActivity = (props) => {
     const dispatch = useDispatch();
     setIsLoading(true);
 
-    // useEffect(() => {
-    //     dispatch(getDetail("")) 
-    //   }, [])
-
     const detail = useSelector(state => state.countryDetail);
     const [selected, setSelected] = useState([]);
 

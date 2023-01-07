@@ -9,10 +9,9 @@ router.get("/", async (req, res) => {
     const {name} = req.query;
     
     if(name){
-        //FUNCION caseName(name);
         const findCountry = await caseName(name)
 
-        if(!findCountry.length) return res.status(400).send("no se econtró país con ese nombre")
+        if(!findCountry.length) return res.status(404).send({error: "no se econtró país con ese nombre"})
         try {
             return res.status(200).send(findCountry)
         } catch (error) {
@@ -37,7 +36,7 @@ router.get("/:idPais", async (req,res) => {
     },
     include: Tourist_activity,})
 
-    console.log(countryInfo.length);
+    // console.log(countryInfo.length);
 
     if(!countryInfo.length) return res.status(404).send(`No hay país con ese ID`)
     
