@@ -61,10 +61,13 @@ export const searchCountries = (name) => {
 }
 
 export const postActivity = (activity) => {
-    return async function(dispatch){
+    return async (dispatch) => {
         console.log(activity);
         const activityTour = await axios.post("/activities", activity);
-        return activityTour
+        return dispatch({
+            type: POST_ACTIVITIES,
+            payload: activityTour
+        })
     }
 }
 
