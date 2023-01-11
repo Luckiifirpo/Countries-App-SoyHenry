@@ -23,7 +23,7 @@ export default function rootReducer(state = initialState, action) {
                     countryDetail: action.payload
             }
         case SEARCH_COUNTRIES:
-            console.log({"action.payload es":action.payload})
+            // console.log({"action.payload es":action.payload})
             if(action.payload.error){
                 return{
                     ...state,

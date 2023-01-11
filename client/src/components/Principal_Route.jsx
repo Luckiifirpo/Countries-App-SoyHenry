@@ -7,6 +7,7 @@ import "../styles/cards.css"
 export default function Principal(props){
     const {allCountries, dataForPagination, currentPage, setCurrentPage, setIsLoading} = props;
     const {ITEMS_IN_FIRST_PAGE, ITEMS_PER_PAGE} = dataForPagination;
+
     const [items, setItems] = useState([...allCountries])
     
     setIsLoading(true)
@@ -33,29 +34,29 @@ export default function Principal(props){
         }
     }
 
-    function nextHandlerToTest(event){
-        let pageToMove = parseInt(event.target.value)
+    // function nextHandlerToTest(event){
+    //     let pageToMove = parseInt(event.target.value)
 
-        const totalItems = allCountries.length;
+    //     const totalItems = allCountries.length;
         
-        const nextPage = pageToMove;
+    //     const nextPage = pageToMove;
         
-        const firstIndex = nextPage * ITEMS_PER_PAGE
+    //     const firstIndex = nextPage * ITEMS_PER_PAGE
         
-        if(firstIndex >= totalItems) return;
+    //     if(firstIndex >= totalItems) return;
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
+    //     window.scrollTo({
+    //         top: 0,
+    //         behavior: "smooth"
+    //     })
 
-        if(allCountries.length){
-            setItems([...allCountries].splice(firstIndex - 1, ITEMS_PER_PAGE))
-            setCurrentPage(nextPage)
-        }else{
-            setItems([])
-        }
-    }
+    //     if(allCountries.length){
+    //         setItems([...allCountries].splice(firstIndex - 1, ITEMS_PER_PAGE))
+    //         setCurrentPage(nextPage)
+    //     }else{
+    //         setItems([])
+    //     }
+    // }
 
     function prevHandler(){
         if(currentPage === 1) return;
