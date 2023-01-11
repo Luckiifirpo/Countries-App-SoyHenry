@@ -44,13 +44,13 @@ export const searchCountries = (name) => {
     return async (dispatch) => {
         try {
             const countries = await axios.get(`/countries?name=${name}`);
-
+            
             return dispatch({
                 type: SEARCH_COUNTRIES,
                 payload: countries.data
             })
         } catch (error) {
-            console.log("se atrapó un error");
+            // console.log("se atrapó un error");
             // console.log(error);
             return dispatch({
                 type: SEARCH_COUNTRIES,

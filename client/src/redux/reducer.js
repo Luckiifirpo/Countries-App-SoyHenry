@@ -62,6 +62,7 @@ export default function rootReducer(state = initialState, action) {
             const filteredCountries = state.allCountries
             const filteredByActivities = !action.payload ? filteredCountries 
             : filteredCountries.filter(country => country.tourist_activities.find(activity => activity.name === action.payload))
+            // console.log({"Filtered by activity is": filteredByActivities});
             if(action.payload){
                 return{
                     ...state,

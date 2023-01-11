@@ -85,6 +85,11 @@ export default function Principal(props){
 
     if(firstPage.length) setIsLoading(false)
 
+    if(!allCountries.length){
+        return(
+            <Loader />
+        )
+    }
     if(allCountries[0].error){
         return(
             <div>
