@@ -43,7 +43,7 @@ async function getData(){
       }
     });
   }else{
-    console.log("Ya hay esos paises en la bdd");
+    console.log("Ya hay esos paises en la base de datos");
   }
 }
 
